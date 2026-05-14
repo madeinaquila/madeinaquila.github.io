@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>contattami — valerio aquilani · aquila</title>
+  <meta name="description" content="Contatta valerio aquilani per collaborazioni in Product Design, Web Development e UX/UI.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Contattami — valerio aquilani · aquila">
+  <meta property="og:description" content="Scrivimi per collaborazioni, progetti freelance o opportunità in Product Design e Web Development.">
+  <meta property="og:image" content="https://valerio-aquilani.github.io/img/og-cover.png">
+  <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <nav class="navbar" id="navbar" aria-label="Navigazione principale">
+    <div class="container">
+      <div class="navbar__inner">
+        <a href="index.html" class="navbar__brand" aria-label="aquila — homepage">aquila.</a>
+        <button class="navbar__toggler" id="navToggler" aria-label="Apri menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+        <ul class="navbar__links" id="navLinks" role="list">
+          <li><a href="index.html">home</a></li>
+          <li><a href="portfolio.html">portfolio</a></li>
+          <li><a href="cv.html">curriculum</a></li>
+          <li><a href="contatti.html" class="active" aria-current="page">contattami</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <div class="contact-page">
+      <div class="container">
+        <div class="contact-grid">
+
+          <div>
+            <p class="section__label">/ iniziamo</p>
+            <h1 class="section__title" style="margin-bottom:1.5rem">parliamo del<br>tuo <em>progetto</em></h1>
+            <p style="color:#777;font-size:0.9rem;line-height:1.8;max-width:340px;margin-bottom:2rem">
+              Sono sempre aperto a nuove collaborazioni, opportunità freelance e posizioni in ambito Product Design e Web Development. Rispondo entro 24 ore.
+            </p>
+            <div class="contact-availability">
+              <span class="dot"></span>
+              <span>disponibile per nuovi progetti</span>
+            </div>
+            <nav class="contact-links">
+              <a href="mailto:hello@valerio-aquilani.it"><span>Email</span><span>↗</span></a>
+              <a href="https://linkedin.com/in/valerio-aquilani" target="_blank" rel="noopener noreferrer"><span>LinkedIn</span><span>↗</span></a>
+              <a href="https://github.com/valerio-aquilani" target="_blank" rel="noopener noreferrer"><span>GitHub</span><span>↗</span></a>
+              <a href="https://behance.net/valerio-aquilani" target="_blank" rel="noopener noreferrer"><span>Behance</span><span>↗</span></a>
+              <a href="cv.html"><span>Scarica CV</span><span>↗</span></a>
+            </nav>
+          </div>
+
+          <div>
+            <form id="contactForm" novalidate aria-label="Modulo di contatto">
+
+              <div class="form-group">
+                <label class="form-label" for="nome">nome *</label>
+                <input type="text" id="nome" name="nome" class="form-control" placeholder="Il tuo nome" required minlength="2" autocomplete="given-name" aria-required="true">
+                <div class="field-error" id="nome-error" role="alert" aria-live="polite"></div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="email">email *</label>
+                <input type="email" id="email" name="email" class="form-control" placeholder="la-tua@email.com" required autocomplete="email" aria-required="true">
+                <div class="field-error" id="email-error" role="alert" aria-live="polite"></div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="tipo">tipo di richiesta</label>
+                <select id="tipo" name="tipo" class="form-control">
+                  <option value="">— seleziona —</option>
+                  <option value="collaborazione">Collaborazione</option>
+                  <option value="freelance">Progetto Freelance</option>
+                  <option value="lavoro">Opportunità di lavoro</option>
+                  <option value="consulenza">Consulenza UX/UI</option>
+                  <option value="altro">Altro</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="oggetto">oggetto *</label>
+                <input type="text" id="oggetto" name="oggetto" class="form-control" placeholder="Di cosa hai bisogno?" required aria-required="true">
+                <div class="field-error" id="oggetto-error" role="alert" aria-live="polite"></div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="messaggio">messaggio *</label>
+                <textarea id="messaggio" name="messaggio" class="form-control" placeholder="Descrivimi il tuo progetto..." required minlength="20" rows="5" aria-required="true"></textarea>
+                <div class="field-error" id="messaggio-error" role="alert" aria-live="polite"></div>
+              </div>
+
+              <div class="form-group" style="display:flex;gap:0.75rem;align-items:flex-start">
+                <input type="checkbox" id="privacy" name="privacy" required style="margin-top:3px;accent-color:#c8a96e;flex-shrink:0" aria-required="true">
+                <label for="privacy" style="font-size:0.78rem;color:#777;line-height:1.6;cursor:pointer">
+                  Acconsento al trattamento dei dati personali per rispondere alla mia richiesta, ai sensi del GDPR. *
+                </label>
+              </div>
+              <div class="field-error" id="privacy-error" role="alert" aria-live="polite"></div>
+
+              <div style="margin-top:2rem">
+                <button type="submit" class="btn-gold" id="submitBtn">
+                  invia messaggio
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </button>
+                <div class="submit-status" id="submitStatus" role="status" aria-live="polite"></div>
+              </div>
+
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__inner">
+        <p class="footer__copy">&copy; <span id="year"></span> valerio aquilani — aquila</p>
+        <nav class="footer__social">
+          <a href="#" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="#" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="cv.html">curriculum</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

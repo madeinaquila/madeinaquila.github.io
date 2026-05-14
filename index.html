@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>aquila — valerio aquilani · product designer & web developer</title>
+  <meta name="description" content="Product Designer, Web Developer e UX/UI Specialist. Creo interfacce accessibili e performanti che uniscono estetica minimale e funzionalità tecnica.">
+  <meta name="author" content="valerio aquilani">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://valerio-aquilani.github.io/">
+  <meta property="og:title" content="aquila — valerio aquilani · product designer & web developer">
+  <meta property="og:description" content="Creo prodotti digitali che uniscono estetica minimale e funzionalità tecnica. Background in Graphic Design e Sviluppo Web.">
+  <meta property="og:image" content="https://valerio-aquilani.github.io/img/og-cover.png">
+  <meta property="og:locale" content="it_IT">
+  <meta property="og:site_name" content="aquila — valerio aquilani">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="aquila — valerio aquilani">
+  <meta name="twitter:description" content="Product Designer & Web Developer. Interfacce accessibili e performanti.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&family=Inter:wght@400;700;900&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar" aria-label="Navigazione principale">
+    <div class="container">
+      <div class="navbar__inner">
+        <a href="index.html" class="navbar__brand" aria-label="aquila — homepage">aquila.</a>
+        <ul class="navbar__links" id="navLinks" role="list">
+          <li><a href="index.html" class="active" aria-current="page">home</a></li>
+          <li><a href="portfolio.html">portfolio</a></li>
+          <li><a href="cv.html">curriculum</a></li>
+          <li><a href="contatti.html">contattami</a></li>
+        </ul>
+        <button class="navbar__toggler" id="navToggler" aria-label="Apri menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero" id="home">
+    <div class="hero__bg"></div>
+    <div class="hero__grid"></div>
+    <div class="container">
+      <div class="hero__content">
+
+        <h1 class="hero__name fade-up" style="transition-delay:0.1s">
+          valerio<br><span>aquilani</span>
+        </h1>
+        <p class="hero__role fade-up" style="transition-delay:0.2s">
+          product designer &amp; web developer
+        </p>
+        <p class="hero__bio fade-up" style="transition-delay:0.3s">
+          Supporto aziende e centri specializzati nella creazione di prodotti digitali che uniscono estetica minimale e funzionalità tecnica. Trasformo le necessità di business in interfacce accessibili e performanti.
+        </p>
+        <div class="hero__cta fade-up" style="transition-delay:0.4s">
+          <a href="portfolio.html" class="btn-gold">
+            vedi il portfolio
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="contatti.html" class="btn-ghost">contattami</a>
+        </div>
+        <div class="stats-row fade-up" style="transition-delay:0.5s">
+          <div>
+            <div class="stat-num">3+</div>
+            <div class="stat-label">anni di esperienza</div>
+          </div>
+          <div>
+            <div class="stat-num">20+</div>
+            <div class="stat-label">progetti completati</div>
+          </div>
+          <div>
+            <div class="stat-num">2</div>
+            <div class="stat-label">settori: healthcare &amp; tech</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- SERVIZI -->
+  <section class="section" aria-labelledby="servizi-title">
+    <div class="container">
+      <p class="section__label">/ quello che faccio</p>
+      <h2 class="section__title" id="servizi-title">design che <em>funziona</em></h2>
+    </div>
+    <div class="services-grid">
+      <article class="service-item fade-up">
+        <div class="service-num">01</div>
+        <h3 class="service-title">UX / UI Design</h3>
+        <p class="service-desc">Progetto interfacce centrate sull'utente, con focus su accessibilità (WCAG) e semplicità d'uso. Dalla ricerca ai wireframe fino al prototipo interattivo.</p>
+      </article>
+      <article class="service-item fade-up" style="transition-delay:0.1s">
+        <div class="service-num">02</div>
+        <h3 class="service-title">Web Development</h3>
+        <p class="service-desc">Sviluppo siti e interfacce "app-like" con HTML, CSS, JavaScript. Codice pulito, responsive e ottimizzato.</p>
+      </article>
+      <article class="service-item fade-up" style="transition-delay:0.2s">
+        <div class="service-num">03</div>
+        <h3 class="service-title">Brand &amp; Visual</h3>
+        <p class="service-desc">Formazione accademica in Graphic Design applicata al digitale: identità visiva, sistemi visivi minimalisti per contesti corporate ad alto profilo.</p>
+      </article>
+      <article class="service-item fade-up" style="transition-delay:0.3s">
+        <div class="service-num">04</div>
+        <h3 class="service-title">Social Strategy</h3>
+        <p class="service-desc">Definizione della linea editoriale e produzione contenuti digitali per rafforzare il posizionamento dei brand sui canali social.</p>
+      </article>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- SKILL -->
+  <section class="section bg-alt" aria-labelledby="skill-title">
+    <div class="container">
+      <p class="section__label">/ competenze</p>
+      <h2 class="section__title" id="skill-title">strumenti &amp; <em>tecnologie</em></h2>
+      <div class="skills-grid">
+        <!-- HTML5 -->
+        <div class="skill-card fade-up">
+          <span class="skill-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="36" height="36" fill="#e34f26"><path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.565-2.438L1.5 0zm7.031 9.75l-.232-2.718 10.059.003.23-2.622L5.412 4.41l.698 8.01h9.126l-.326 3.426-2.91.804-2.955-.81-.188-2.11H6.248l.33 4.171L12 19.351l5.379-1.443.744-8.157H8.531z"/></svg>
+          </span>
+          <span class="skill-name">HTML5</span>
+        </div>
+        <!-- CSS3 -->
+        <div class="skill-card fade-up" style="transition-delay:0.05s">
+          <span class="skill-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="36" height="36" fill="#1572b6"><path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.564-2.438L1.5 0zm17.09 4.413L5.41 4.41l.213 2.622 10.125.002-.255 2.716h-6.64l.24 2.573h6.182l-.366 3.523-2.91.804-2.956-.81-.188-2.11h-2.61l.29 3.855L12 19.288l5.373-1.53L18.59 4.414z"/></svg>
+          </span>
+          <span class="skill-name">CSS3</span>
+        </div>
+        <!-- Sass -->
+        <div class="skill-card fade-up" style="transition-delay:0.1s">
+          <span class="skill-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="36" height="36" fill="#cc6699"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm3.343 15.313c-.39.814-.957 1.367-1.62 1.618-.662.25-1.406.21-2.036-.102-.63-.311-1.08-.88-1.217-1.548-.139-.668.056-1.361.516-1.853.46-.493 1.124-.748 1.8-.695.675.053 1.285.404 1.648.95.183.275.29.59.311.914.022.323-.038.647-.162.94zm-3.93-6.24c-.34.252-.728.414-1.138.472a2.633 2.633 0 0 1-1.214-.134 2.62 2.62 0 0 1-.985-.677 2.601 2.601 0 0 1-.547-1.068 2.585 2.585 0 0 1 .068-1.22 2.6 2.6 0 0 1 .62-1.018 2.62 2.62 0 0 1 1.002-.619 2.638 2.638 0 0 1 1.224-.07c.411.074.79.258 1.098.534.309.276.536.63.656 1.022.12.392.13.808.027 1.204a2.59 2.59 0 0 1-.811 1.574z"/></svg>
+          </span>
+          <span class="skill-name">Sass / SCSS</span>
+        </div>
+        <!-- Bootstrap -->
+        <div class="skill-card fade-up" style="transition-delay:0.15s">
+          <span class="skill-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="36" height="36" fill="#7952b3"><path d="M11.77 11.24H9.956V8.202h2.152c1.17 0 1.834.522 1.834 1.466 0 1.008-.773 1.572-2.174 1.572zm.324 1.206H9.956v3.348h2.231c1.459 0 2.232-.585 2.232-1.685s-.795-1.663-2.325-1.663zM24 11.39v1.218c-1.128.108-1.817.944-2.226 2.268-.407 1.319-.463 2.937-.42 4.186.045 1.3-.968 2.5-2.337 2.5H4.983c-1.37 0-2.382-1.2-2.337-2.5.043-1.249-.013-2.867-.42-4.186-.41-1.324-1.1-2.16-2.226-2.268V11.39c1.128-.108 1.816-.944 2.226-2.268.407-1.319.463-2.937.42-4.186C2.601 3.636 3.613 2.436 4.983 2.436h14.034c1.37 0 2.382 1.2 2.337 2.5-.043 1.249.013 2.867.42 4.186.41 1.324 1.098 2.16 2.226 2.268zm-7.927 2.725c0-1.248-.74-2.064-1.984-2.273v-.028c.981-.244 1.602-.993 1.602-2.055 0-1.466-1.084-2.39-2.752-2.39H8.227v9.38h4.914c1.826 0 2.932-.946 2.932-2.634z"/></svg>
+          </span>
+          <span class="skill-name">Bootstrap</span>
+        </div>
+        <!-- Figma -->
+        <div class="skill-card fade-up" style="transition-delay:0.2s">
+          <span class="skill-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="36" height="36"><path fill="#f24e1e" d="M8 24c2.208 0 4-1.792 4-4v-4H8c-2.208 0-4 1.792-4 4s1.792 4 4 4z"/><path fill="#ff7262" d="M4 12c0-2.208 1.792-4 4-4h4v8H8c-2.208 0-4-1.792-4-4z"/><path fill="#a259ff" d="M4 4c0-2.208 1.792-4 4-4h4v8H8C5.792 8 4 6.208 4 4z"/><path fill="#1abcfe" d="M12 0h4c2.208 0 4 1.792 4 4s-1.792 4-4 4h-4V0z"/><path fill="#0acf83" d="M20 12c0 2.208-1.792 4-4 4s-4-1.792-4-4 1.792-4 4-4 4 1.792 4 4z"/></svg>
+          </span>
+          <span class="skill-name">Figma</span>
+        </div>
+        <!-- UX Design -->
+        <div class="skill-card fade-up" style="transition-delay:0.25s">
+          <span class="skill-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="#c8a96e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg>
+          </span>
+          <span class="skill-name">UX Design</span>
+        </div>
+        <!-- Adobe Suite -->
+        <div class="skill-card fade-up" style="transition-delay:0.3s">
+          <span class="skill-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="36" height="36" fill="#ff0000"><path d="M13.966 22.624l-1.69-4.281H8.122l3.892-9.144 5.662 13.425zM8.884 1.376H0v21.248zm6.23 0L24 22.624V1.376z"/></svg>
+          </span>
+          <span class="skill-name">Adobe Suite</span>
+        </div>
+        <!-- Git / GitHub -->
+        <div class="skill-card fade-up" style="transition-delay:0.35s">
+          <span class="skill-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="36" height="36" fill="#e8e8e8"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+          </span>
+          <span class="skill-name">Git / GitHub</span>
+        </div>
+      </div>
+      <div class="sectors fade-up">
+        <span class="sector">Healthcare &amp; Wellness</span>
+        <span class="sector">Technology / IT</span>
+        <span class="sector">Sport</span>
+        <span class="sector">Digital Marketing</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- CTA -->
+  <section class="section" aria-label="Call to action">
+    <div class="container" style="text-align:center">
+      <p class="section__label" style="justify-content:center;display:flex">/ iniziamo</p>
+      <h2 class="section__title fade-up" style="text-align:center">hai un progetto <em>in mente</em>?</h2>
+      <p style="color:#777;max-width:480px;margin:0 auto 3rem;font-size:0.95rem" class="fade-up">
+        Sono aperto a collaborazioni, freelance e opportunità in ambito Product Design e Web Development.
+      </p>
+      <div class="fade-up">
+        <a href="contatti.html" class="btn-gold">
+          scrivimi un messaggio
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__inner">
+        <p class="footer__copy">&copy; <span id="year"></span> valerio aquilani — aquila</p>
+        <nav class="footer__social" aria-label="Link social">
+          <a href="#" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="#" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="#" target="_blank" rel="noopener noreferrer">Behance</a>
+          <a href="contatti.html">contatto</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

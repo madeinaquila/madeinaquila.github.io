@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>aquila.</title>
+  <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@900&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html, body {
+      width: 100%; height: 100%;
+      background: #080808;
+      overflow: hidden;
+      font-family: 'Inter', sans-serif;
+    }
+
+    /* ── Scena ── */
+    .scene {
+      position: fixed; inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    /* ── Logo ── */
+    .logo {
+      font-size: clamp(4rem, 14vw, 11rem);
+      font-weight: 900;
+      font-style: italic;
+      letter-spacing: -0.04em;
+      line-height: 1;
+      color: transparent;
+      position: relative;
+      overflow: hidden;
+
+      /* Clip-path rivela il testo da sinistra */
+      clip-path: inset(0 100% 0 0);
+      animation:
+        revealText 1.2s cubic-bezier(0.77, 0, 0.175, 1) 0.3s forwards,
+        colorFill  0.6s ease 1.2s forwards;
+    }
+
+    @keyframes revealText {
+      from { clip-path: inset(0 100% 0 0); }
+      to   { clip-path: inset(0 0% 0 0); }
+    }
+
+    @keyframes colorFill {
+      from { color: #e8e8e8; }
+      to   { color: #e8e8e8; }
+    }
+
+    /* Linea che scorre sotto il testo mentre rivela */
+    .logo::before {
+      content: '';
+      position: absolute;
+      bottom: 0; left: -4px;
+      width: 3px; height: 100%;
+      background: #c8a96e;
+      animation: lineRun 1.2s cubic-bezier(0.77, 0, 0.175, 1) 0.3s forwards;
+      transform: translateX(0);
+    }
+    @keyframes lineRun {
+      from { left: -4px; opacity: 1; }
+      to   { left: calc(100% + 4px); opacity: 0; }
+    }
+
+    /* Il punto finale — appare con un pop */
+    .logo .dot {
+      display: inline-block;
+      color: #c8a96e;
+      opacity: 0;
+      transform: scale(0) rotate(-20deg);
+      animation: dotPop 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) 1.4s forwards;
+    }
+    @keyframes dotPop {
+      to { opacity: 1; transform: scale(1) rotate(0deg); }
+    }
+
+    /* Testo logo (senza il punto) */
+    .logo .word {
+      display: inline-block;
+      color: #e8e8e8;
+    }
+
+    /* ── Barra di caricamento ── */
+    .loader {
+      margin-top: 3rem;
+      width: 48px;
+      height: 1px;
+      background: rgba(200,169,110,0.15);
+      position: relative;
+      opacity: 0;
+      animation: loaderAppear 0.4s ease 1.6s forwards;
+    }
+    @keyframes loaderAppear {
+      to { opacity: 1; }
+    }
+
+    .loader__fill {
+      position: absolute;
+      left: 0; top: 0;
+      height: 100%;
+      background: #c8a96e;
+      width: 0;
+      animation: loaderFill 1.8s cubic-bezier(0.4, 0, 0.2, 1) 1.8s forwards;
+    }
+    @keyframes loaderFill {
+      0%   { width: 0%; }
+      60%  { width: 80%; }
+      100% { width: 100%; }
+    }
+
+    /* ── Uscita — curtain dal basso ── */
+    .curtain {
+      position: fixed;
+      inset: 0;
+      background: #080808;
+      transform: scaleY(0);
+      transform-origin: bottom;
+      z-index: 100;
+      transition: transform 0.7s cubic-bezier(0.76, 0, 0.24, 1);
+    }
+    .curtain.active {
+      transform: scaleY(1);
+    }
+
+    /* ── Skip ── */
+    .skip {
+      position: fixed;
+      bottom: 2rem; right: 2rem;
+      font-size: 0.62rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(200,169,110,0.3);
+      cursor: pointer;
+      border: none;
+      background: none;
+      transition: color 0.3s;
+      opacity: 0;
+      animation: loaderAppear 0.4s ease 2s forwards;
+    }
+    .skip:hover { color: rgba(200,169,110,0.7); }
+
+    /* Noise */
+    body::after {
+      content: '';
+      position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0.4;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="curtain" id="curtain"></div>
+
+  <div class="scene">
+    <div class="logo" id="logo">
+      <span class="word">aquila</span><span class="dot">.</span>
+    </div>
+    <div class="loader">
+      <div class="loader__fill"></div>
+    </div>
+  </div>
+
+  <button class="skip" id="skip">skip</button>
+
+  <script>
+    function enter() {
+      const curtain = document.getElementById('curtain');
+      curtain.classList.add('active');
+      setTimeout(function() {
+        window.location.href = 'index.html';
+      }, 700);
+    }
+
+    // Auto dopo 4s (1.8s loader + 0.2s buffer + 0.7s curtain = ~3.7s)
+    var timer = setTimeout(enter, 3800);
+
+    // Skip
+    document.getElementById('skip').addEventListener('click', function() {
+      clearTimeout(timer);
+      enter();
+    });
+
+    // Click ovunque dopo 2s
+    setTimeout(function() {
+      document.addEventListener('click', function() {
+        clearTimeout(timer);
+        enter();
+      }, { once: true });
+    }, 2000);
+  </script>
+</body>
+</html>

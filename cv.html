@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>curriculum — valerio aquilani · aquila</title>
+  <meta name="description" content="Curriculum vitae di valerio aquilani — Product Designer, Web Developer, UX/UI Specialist.">
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="CV — valerio aquilani · aquila">
+  <meta property="og:description" content="Product Designer & Web Developer. Diploma Accademico II livello — Accademia di Belle Arti di Roma.">
+  <meta property="og:image" content="https://valerio-aquilani.github.io/img/og-cover.png">
+  <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <nav class="navbar" id="navbar" aria-label="Navigazione principale">
+    <div class="container">
+      <div class="navbar__inner">
+        <a href="index.html" class="navbar__brand" aria-label="aquila — homepage">aquila.</a>
+        <ul class="navbar__links" id="navLinks" role="list">
+          <li><a href="index.html">home</a></li>
+          <li><a href="portfolio.html">portfolio</a></li>
+          <li><a href="cv.html" class="active" aria-current="page">curriculum</a></li>
+          <li><a href="contatti.html">contattami</a></li>
+        </ul>
+        <button class="navbar__toggler" id="navToggler" aria-label="Apri menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <div class="container">
+
+      <header class="cv-header">
+        <div>
+          <h1 class="cv-name">valerio<br>aquilani</h1>
+          <p class="cv-title">product designer &nbsp;·&nbsp; web developer &nbsp;·&nbsp; ux/ui specialist</p>
+          <div class="cv-badges">
+            <span class="cv-badge">Graphic Design</span>
+            <span class="cv-badge">Web Development</span>
+            <span class="cv-badge cv-badge--access">Accessibilità WCAG</span>
+            <span class="cv-badge cv-badge--sport">Atleta Nazionale FSSI</span>
+          </div>
+        </div>
+        <div style="display:flex;gap:0.75rem;flex-wrap:wrap">
+          <button class="btn-ghost" onclick="window.print()" aria-label="Stampa il curriculum">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 01-2-2v-5a2 2 0 012-2h16a2 2 0 012 2v5a2 2 0 01-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+            stampa / pdf
+          </button>
+          <a href="contatti.html" class="btn-gold">contattami</a>
+        </div>
+      </header>
+
+      <div class="cv-grid">
+
+        <!-- SIDEBAR -->
+        <aside class="cv-sidebar">
+
+          <div class="cv-section">
+            <h2 class="cv-section-title">contatti</h2>
+            <div class="cv-contact-item">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#c8a96e" stroke-width="2" aria-hidden="true" style="flex-shrink:0"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              <a href="mailto:v.aquilani10@gmail.com" style="color:inherit">v.aquilani10@gmail.com</a>
+            </div>
+            <div class="cv-contact-item">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#c8a96e" stroke-width="2" aria-hidden="true" style="flex-shrink:0"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+              <a href="https://madeinaquila.github.io" target="_blank" rel="noopener noreferrer" style="color:inherit">madeinaquila.github.io</a>
+            </div>
+            <div class="cv-contact-item">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="#c8a96e" aria-hidden="true" style="flex-shrink:0"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+              <a href="https://linkedin.com/in/valerio-aquilani" target="_blank" rel="noopener noreferrer" style="color:inherit">linkedin.com/in/valerio-aquilani</a>
+            </div>
+            <div class="cv-contact-item">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="#c8a96e" aria-hidden="true" style="flex-shrink:0"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.2c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.4 5.4 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65S9 17.44 9 18v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+              <a href="https://github.com/madeinaquila" target="_blank" rel="noopener noreferrer" style="color:inherit">github.com/madeinaquila</a>
+            </div>
+            <div class="cv-contact-item">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#c8a96e" stroke-width="2" aria-hidden="true" style="flex-shrink:0"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span>Roma, Italia</span>
+            </div>
+          </div>
+
+          <div class="cv-section">
+            <h2 class="cv-section-title">competenze tecniche</h2>
+            <div style="display:flex;flex-wrap:wrap;gap:0.5rem;margin-top:0.25rem;margin-bottom:0.5rem"><span class="cv-tag">HTML5 / CSS3</span>
+            <span class="cv-tag">Sass / SCSS</span>
+            <span class="cv-tag">Bootstrap 5</span>
+            <span class="cv-tag">Figma / Prototyping</span>
+            <span class="cv-tag">Adobe Suite</span>
+            <span class="cv-tag">UX Research</span>
+            <span class="cv-tag">Accessibilità WCAG</span>
+            <span class="cv-tag">Social Media Strategy</span>
+            <span class="cv-tag">Git / GitHub</span>
+          </div>
+          </div>
+
+          <div class="cv-section">
+            <h2 class="cv-section-title">strumenti</h2>
+            <div>
+              <span class="cv-tag">Figma</span><span class="cv-tag">Adobe XD</span><span class="cv-tag">Photoshop</span>
+              <span class="cv-tag">Illustrator</span><span class="cv-tag">InDesign</span><span class="cv-tag">After Effects</span>
+              <span class="cv-tag">HTML5</span><span class="cv-tag">CSS3 / Sass</span><span class="cv-tag">Bootstrap</span>
+              <span class="cv-tag">Git</span><span class="cv-tag">Notion</span><span class="cv-tag">WordPress</span>
+            </div>
+          </div>
+
+          <div class="cv-section">
+            <h2 class="cv-section-title">lingue</h2>
+            <span class="cv-tag">Italiano</span>
+            <span class="cv-tag">LIS</span>
+            <span class="cv-tag">Inglese — scritto</span>
+            <p style="font-size:0.75rem;color:#555;margin-top:0.25rem;font-style:italic">Buona comprensione scritta e lettura. La parte orale risulta più complessa in quanto persona sorda.</p>
+          </div>
+
+          <div class="cv-section">
+            <h2 class="cv-section-title">soft skills</h2>
+            <div>
+              <span class="cv-tag">Problem Solving</span><span class="cv-tag">Leadership</span>
+              <span class="cv-tag">Team Work</span><span class="cv-tag">Resilienza</span>
+              <span class="cv-tag">Attenzione al dettaglio</span><span class="cv-tag">Empatia</span>
+              <span class="cv-tag">Pensiero sistemico</span>
+            </div>
+          </div>
+
+          <div class="cv-section">
+            <h2 class="cv-section-title">settori</h2>
+            <div>
+              <span class="cv-tag">Healthcare &amp; Wellness</span><span class="cv-tag">Tech / IT</span>
+              <span class="cv-tag">Sport</span><span class="cv-tag">Corporate</span>
+            </div>
+          </div>
+
+        </aside>
+
+        <!-- MAIN -->
+        <section class="cv-main">
+
+          <div class="cv-section">
+            <h2 class="cv-section-title">profilo professionale</h2>
+            <div class="cv-highlight-box">
+              <p>Product Designer &amp; Web Developer con solida formazione accademica in Graphic Design (Accademia di Belle Arti di Roma). Supporto aziende nella creazione di prodotti digitali che uniscono <strong style="color:#e8e8e8">estetica minimale e funzionalità tecnica</strong>, con particolare attenzione all'accessibilità digitale (WCAG). La mia esperienza personale come persona sorda mi permette di portare una prospettiva autentica nel design inclusivo.</p>
+            </div>
+            <div class="access-note">
+              <p><strong>Accessibilità come missione.</strong> Essendo una persona sorda, l'accessibilità digitale non è per me solo una competenza tecnica ma una visione del mondo. Progetto interfacce che rispettano gli standard WCAG: contrasti adeguati, sottotitoli, navigazione da tastiera e architettura dell'informazione inclusiva.</p>
+            </div>
+          </div>
+
+          <div class="cv-section">
+            <h2 class="cv-section-title">esperienza professionale</h2>
+            <article class="cv-item">
+              <div class="cv-item-header">
+                <span class="cv-item-title">Product Designer &amp; Web Developer</span>
+                <span class="cv-item-date">2022 — presente</span>
+              </div>
+              <p class="cv-item-company">Collaborazioni Professionali — Settori: Tech, Healthcare &amp; Wellness</p>
+              <div class="cv-highlight-box" style="margin-top:0.75rem">
+                <p>Gestione dell'intero ecosistema digitale per diverse realtà aziendali, integrando design, sviluppo e comunicazione social.</p>
+              </div>
+              <div>
+                <div class="cv-sub-item">
+                  <div class="cv-sub-dot"></div>
+                  <div class="cv-sub-content">
+                    <strong>UX/UI &amp; Web Development</strong>
+                    <span>Progettazione e sviluppo di interfacce "app-like" per piattaforme di diagnostica medica e sistemi gestionali sportivi, con focus su accessibilità (WCAG) e prestazioni.</span>
+                  </div>
+                </div>
+                <div class="cv-sub-item">
+                  <div class="cv-sub-dot"></div>
+                  <div class="cv-sub-content">
+                    <strong>Visual &amp; Graphic Design</strong>
+                    <span>Creazione della Brand Identity e di sistemi visivi minimalisti per contesti corporate ad alto profilo.</span>
+                  </div>
+                </div>
+                <div class="cv-sub-item">
+                  <div class="cv-sub-dot"></div>
+                  <div class="cv-sub-content">
+                    <strong>Social Media Management &amp; Strategy</strong>
+                    <span>Definizione della linea editoriale e produzione di contenuti digitali per rafforzare il posizionamento dei brand sui canali social.</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="cv-section">
+            <h2 class="cv-section-title">sport &amp; atletismo</h2>
+            <div class="sport-card">
+              <p class="sport-title">Atleta della Nazionale Italiana Sordi — Pallavolo &amp; Beach Volley</p>
+              <p class="sport-desc">Membro della <strong style="color:#4ade80">FSSI — Federazione Sport Sordi Italia</strong>. Rappresento l'Italia nelle competizioni internazionali. L'esperienza agonistica ha rafforzato doti fondamentali come leadership, resilienza e lavoro di squadra.</p>
+            </div>
+            <p style="font-size:0.78rem;color:#444;margin-top:0.5rem;font-style:italic">Lo sport e il design condividono la stessa disciplina: iterare, migliorare, non arrendersi mai al "abbastanza buono".</p>
+          </div>
+
+          <div class="cv-section">
+            <h2 class="cv-section-title">formazione accademica</h2>
+            <article class="cv-item">
+              <div class="cv-item-header">
+                <span class="cv-item-title">Diploma Accademico II livello in Graphic Design</span>
+                <span class="edu-pill">2022</span>
+              </div>
+              <p class="cv-item-company">Accademia di Belle Arti di Roma</p>
+              <p class="cv-item-desc">Specializzazione in comunicazione visiva avanzata, tipografia, brand design e progettazione per i media digitali. Approfondimento in UX/UI Design: ricerca utente, wireframing, prototipazione e test di usabilità.</p>
+            </article>
+            <article class="cv-item">
+              <div class="cv-item-header">
+                <span class="cv-item-title">Diploma Accademico I livello in Grafica Editoriale</span>
+                <span class="edu-pill">2020</span>
+              </div>
+              <p class="cv-item-company">Accademia di Belle Arti di Roma</p>
+              <p class="cv-item-desc">Grafica editoriale, layout, impaginazione e sistemi di comunicazione visiva per stampa e digitale.</p>
+            </article>
+            <article class="cv-item">
+              <div class="cv-item-header">
+                <span class="cv-item-title">Laurea Triennale in Disegno Industriale</span>
+                <span class="edu-pill">2013</span>
+              </div>
+              <p class="cv-item-company">Università La Sapienza di Roma</p>
+              <p class="cv-item-desc">Design del prodotto, ergonomia, materiali e processi produttivi. Base solida di pensiero progettuale.</p>
+            </article>
+          </div>
+
+          <div class="cv-section">
+            <h2 class="cv-section-title">formazione continua</h2>
+            <article class="cv-item">
+              <div class="cv-item-header">
+                <span class="cv-item-title">Master Full Stack Development &amp; Agenti AI</span>
+                <span class="cv-item-date">2025 — in corso</span>
+              </div>
+              <p class="cv-item-company">Start2Impact University</p>
+              <p class="cv-item-desc">HTML, CSS, Sass, Bootstrap, JavaScript, Git e GitHub Pages. Sviluppo full stack e intelligenza artificiale applicata. Progetto finale: sito personale multi-pagina responsive e accessibile.</p>
+            </article>
+          </div>
+
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__inner">
+        <p class="footer__copy">&copy; <span id="year"></span> valerio aquilani — aquila</p>
+        <nav class="footer__social">
+          <a href="#" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="#" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="contatti.html">contatto</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
