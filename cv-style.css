@@ -1,0 +1,25 @@
+/* ── cv-style.css — stili specifici Curriculum Vitae ── */
+
+/* Sidebar sticky su desktop */
+@media (min-width: 769px) {
+  .cv-sidebar {
+    position: sticky;
+    top: 80px;
+    align-self: flex-start;
+    max-height: calc(100vh - 100px);
+    overflow-y: auto;
+    scrollbar-width: none;
+  }
+  .cv-sidebar::-webkit-scrollbar { display: none; }
+}
+
+/* Animazione skill fill più lenta sul CV */
+.cv-skill-fill {
+  transition: width 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Print ottimizzato CV */
+@media print {
+  .cv-header { padding-top: 1rem; }
+  .cv-grid { grid-template-columns: 1fr 2fr; }
+}

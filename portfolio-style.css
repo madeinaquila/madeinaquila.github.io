@@ -1,0 +1,21 @@
+/* ── portfolio-style.css — stili specifici Portfolio ── */
+
+/* Preview mockup hover scale */
+.project-card__preview-bg {
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Tab attivo con peso maggiore */
+.portfolio-tab.active {
+  font-weight: 700;
+}
+
+/* S2I strip full width */
+.s2i-strip {
+  border-radius: 0;
+}
+
+/* Project card hover shadow */
+.project-card:hover {
+  box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+}

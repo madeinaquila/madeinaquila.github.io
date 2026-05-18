@@ -1,0 +1,23 @@
+/* ── index-style.css — stili specifici Homepage ── */
+
+/* Hero section */
+.hero {
+  min-height: calc(100vh - 65px);
+}
+
+/* Stats row animazione */
+.stats-row {
+  border-top: 1px solid rgba(200,169,110,0.1);
+  padding-top: 2.5rem;
+}
+
+/* CTA section centrata */
+.section[aria-label="Call to action"] {
+  background: #080808;
+}
+
+/* Skill icon hover glow */
+.skill-card:hover .skill-icon svg {
+  filter: drop-shadow(0 0 8px rgba(200,169,110,0.4));
+  transition: filter 0.3s ease;
+}
